@@ -40,7 +40,7 @@ if uploaded_file is not None:
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'], rect['top']), (rect['left']+rect['width'], rect['top']+rect['height'])],
                        fill=None, outline='green', width=5)
-        ag() = ag.append(ag)
+       
 
         st.write(ag)
 
