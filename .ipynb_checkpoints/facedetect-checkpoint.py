@@ -1,4 +1,3 @@
-from os import O_APPEND
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -34,18 +33,14 @@ if uploaded_file is not None:
     results = res.json()
     for result in results:
         rect = result['faceRectangle']
-
-        ag = result['faceAttributes']['age']
+        at = result['faceAttributes']
+        ag = at['age']
 
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'], rect['top']), (rect['left']+rect['width'], rect['top']+rect['height'])],
                        fill=None, outline='green', width=5)
-        ag() = ag.append(ag)
-
-        st.write(ag)
 
     st.image(img, caption='Uploaded Image', use_column_width=True)
-
 
 #  実行の方法：　streamlit run facedetect.py
 
